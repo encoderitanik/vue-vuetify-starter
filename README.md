@@ -1,19 +1,109 @@
-# vue-vuetify-starter
+# Vue Vuetify Starter
 
-## Project setup
+##### Project setup
 ```
 yarn install
-```
-
-### Compiles and hot-reloads for development
-```
 yarn serve
-```
-
-### Compiles and minifies for production
-```
 yarn build
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+##### Folder structure
+
+```
+node_modules
+public
+src
+│   api
+|   assets
+|   |   css
+|   |   |   variables.scss
+|   |   fonts
+|   |   images
+|   |   scss
+|   |   |   _fonts.scss
+|   |   |   _mixins.scss
+|   |   |   _responsive.scss
+|   |   |   _styles.scss
+|   |   |   _utils.scss
+|   |   |   _variables.scss
+|   |   |   main.scss
+|   |   svg
+|   components
+|   |   ...
+│   layouts
+|   |   Default.vue    
+|   |   ...
+│   plugins
+|   |   vuetify.js
+|   |   ...
+|   router
+|   storage
+|   store
+|   |   modules
+|   |   |   module.store.js
+|   |   |   ...
+|   |   |   index.js
+|   |   index.js
+|   views
+|   |   ...
+|   App.vue
+|   consts.js
+|   helper.js
+|   main.js
+|   registerServiceWorker.js
+.editorconfig
+.gitignore
+babel.config.js
+jsconfig.json
+package.json
+README.md
+vue.config.
+yarn.lock
+```
+
+##### Naming convention
+
+- Vue component
+  <sup>For component file name we will user `PascalCase` or `kebab-case` like examples below,
+  :heavy_check_mark: TodoList.vue
+  :x: Todo-List.vue
+  :heavy_check_mark: todo-list.vue
+  :x: todoList.vue
+  :x: todolist.vue
+  <sup>
+- Component Registration
+  <sup>Same as Component name.`PascalCase` or `kebab-case`.<sup>
+  ```js
+  Vue.component('MyComponent', {
+    // ...
+  })
+  ```
+  or
+  ```js
+  Vue.component('my-component', {
+    // ...
+  })
+  ```
+  <sup>For using.<sup>
+  ```jsx
+  <MyComponent/>
+  ```
+  or
+  ```jsx
+  <my-component>
+      // ...
+  </my-component>
+  ```
+
+- Variables
+  <sup>We will use `camelCase` but for global contants we will use a `_` before variable name
+  </sup>
+  ```js
+  // variables
+  let firstName = 'John'
+  let lastName = 'Doe'
+  const authAPI = axios.create({})
+
+  // global constsants
+  const _baseURL = '/'
+  ```

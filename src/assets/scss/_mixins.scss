@@ -1,0 +1,24 @@
+@mixin font($size) {
+  font-size: $size;
+}
+@mixin on($name) {
+  @media (min-width: map-get(
+    $breakpoints-up , $name
+   )) {
+    @content;
+  }
+}
+@mixin up($name) {
+  @media (min-width: map-get(
+    $breakpoints-up , $name
+   )) {
+    @content;
+  }
+}
+@mixin down($name) {
+  @media (max-width: map-get(
+    $breakpoints-down , $name
+   )) {
+    @content;
+  }
+}
