@@ -52,6 +52,8 @@ yarn build
 |   main.js
 |   registerServiceWorker.js
 .editorconfig
+.env
+.env.example
 .gitignore
 babel.config.js
 jsconfig.json
@@ -65,12 +67,17 @@ yarn.lock
 
 - Vue component<br>
   For component file name we will user `PascalCase` or `kebab-case` like examples below,<br>
+  ```
+  // do this
+  TodoList.vue
+  todo-list.vue
 
-  :heavy_check_mark: TodoList.vue<br>
-  :x: Todo-List.vue<br>
-  :heavy_check_mark: todo-list.vue<br>
-  :x: todoList.vue<br>
-  :x: todolist.vue
+  // not this
+  Todo-List.vue
+  todoList.vue
+  todolist.vue
+  todo_list.vue
+  ```
   <br>
 - Component Registration<br>
   Same as Component name.`PascalCase` or `kebab-case`.

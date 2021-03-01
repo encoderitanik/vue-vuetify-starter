@@ -4,6 +4,8 @@ import router from './router'
 import store from './store'
 import vuetify from './plugins/vuetify'
 
+import './api/handler'
+
 // Stylesheets
 import './assets/css/variables.css'
 import './assets/scss/main.scss'
