@@ -63,15 +63,16 @@ yarn.lock
 
 ##### Naming convention
 
-- Vue component
-  <sup>For component file name we will user `PascalCase` or `kebab-case` like examples below,
+- Vue component<br>
+  <sup>For component file name we will user `PascalCase` or `kebab-case` like examples below,<sup><br>
+
   :heavy_check_mark: TodoList.vue
   :x: Todo-List.vue
   :heavy_check_mark: todo-list.vue
   :x: todoList.vue
   :x: todolist.vue
-  <sup>
-- Component Registration
+  <br>
+- Component Registration<br>
   <sup>Same as Component name.`PascalCase` or `kebab-case`.<sup>
   ```js
   Vue.component('MyComponent', {
@@ -95,7 +96,7 @@ yarn.lock
   </my-component>
   ```
 
-- Variables
+- Variables<br>
   <sup>We will use `camelCase` but for global contants we will use a `_` before variable name
   </sup>
   ```js
