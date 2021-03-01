@@ -10,16 +10,16 @@ yarn build
 ##### Folder structure
 
 ```
-node_modules
-public
-src
-│   api
-|   assets
-|   |   css
+/node_modules
+/public
+/src
+│   /api
+|   /assets
+|   |   /css
 |   |   |   variables.scss
-|   |   fonts
-|   |   images
-|   |   scss
+|   |   /fonts
+|   |   /images
+|   |   /scss
 |   |   |   _fonts.scss
 |   |   |   _mixins.scss
 |   |   |   _responsive.scss
@@ -27,24 +27,24 @@ src
 |   |   |   _utils.scss
 |   |   |   _variables.scss
 |   |   |   main.scss
-|   |   svg
-|   components
+|   |   /svg
+|   /components
 |   |   ...
-│   layouts
+│   /layouts
 |   |   Default.vue    
 |   |   ...
-│   plugins
+│   /plugins
 |   |   vuetify.js
 |   |   ...
-|   router
-|   storage
-|   store
-|   |   modules
+|   /router
+|   /storage
+|   /store
+|   |   /modules
 |   |   |   module.store.js
 |   |   |   ...
 |   |   |   index.js
 |   |   index.js
-|   views
+|   /views
 |   |   ...
 |   App.vue
 |   consts.js
@@ -95,9 +95,17 @@ yarn.lock
       // ...
   </my-component>
   ```
-
+- Folder name<br>
+  We will use `kebab-case`.
+  ```
+  /auth
+  /components
+  |   /utils
+  |   /folder-name
+  |   ...
+  ```
 - Variables<br>
-  We will use `camelCase` but for global contants we will use a `_` before variable name
+  We will use `camelCase` but for global constants we will use a `_` before variable name
   </sup>
   ```js
   // variables
