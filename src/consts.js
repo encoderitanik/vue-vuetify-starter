@@ -12,7 +12,10 @@ export const _time = (() => {
   let week = day * 7
   let month = day * 30
   let year = day * 365
-  return { ms, sec, min, hour, day, week, month, year }
+  return {
+    ms, sec, min, hour,
+    day, week, month, year
+  }
 })()
 
 export const _localServer = 'http://localhost:3500'
