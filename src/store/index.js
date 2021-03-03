@@ -11,12 +11,6 @@ if (_isDev) plugins.push(createLogger())
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  state: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
   modules,
   plugins
 })

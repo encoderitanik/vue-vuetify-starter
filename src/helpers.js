@@ -84,14 +84,3 @@ export const qs = {
       }, {})
   }
 }
-
-// let foo
-
-// let data = {
-//   name: 'Anik',
-//   age: 30,
-//   email: true,
-//   foo
-// }
-// console.log(qs.stringify(data));
-// console.log(qs.parse(qs.stringify(data)));

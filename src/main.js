@@ -4,7 +4,7 @@ import router from './router'
 import store from './store'
 import vuetify from './plugins/vuetify'
 
-import './api/handler'
+import { registerGlobalComponents } from './components'
 
 // Stylesheets
 import './assets/css/variables.css'
@@ -12,6 +12,9 @@ import './assets/scss/main.scss'
 
 // Proggresive web app
 import './registerServiceWorker'
+
+// Global components
+registerGlobalComponents(Vue)
 
 Vue.config.productionTip = false
 
