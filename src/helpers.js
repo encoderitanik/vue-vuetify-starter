@@ -84,3 +84,24 @@ export const qs = {
       }, {})
   }
 }
+
+export const camelToSnake = str => str.replace(
+  /[A-Z]/g,
+  letter => `_${letter.toLowerCase()}`
+);
+
+export const snakeToCamel = data => {
+  if (typeof data === 'string') {
+    return data.replace(
+      /([-_][a-z])/g,
+      (group) => group.toUpperCase()
+        .replace('-', '')
+        .replace('_', '')
+    );
+  }
+  return Object.entries(data)
+    .reduce((nData, [key, value]) => {
+      nData[snakeToCamel(key)] = value;
+      return nData
+    }, {})
+}

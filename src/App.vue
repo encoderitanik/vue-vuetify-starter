@@ -34,7 +34,7 @@
     </v-app-bar>
 
     <v-main>
-      <HelloWorld />
+      <router-view />
     </v-main>
   </v-app>
 </template>
@@ -42,6 +42,8 @@
 <script>
 import HelloWorld from "./components/HelloWorld";
 
+import api from "./api";
+import Cookies from "js-cookie";
 export default {
   name: "App",
 
@@ -49,8 +51,33 @@ export default {
     HelloWorld,
   },
 
-  data: () => ({
-    //
-  }),
+  created() {
+    // this.onCreated();
+  },
+  methods: {
+    async onCreated() {
+      let res = await api.post("/meetings/status-change", {
+        meeting_id: 10,
+      });
+      console.log(res);
+
+      // let res = await api.login({
+      //   email: "superadmin@admin.com",
+      //   password: "12345678",
+      // });
+      // console.log(res);
+
+      // let res = await api.login({
+      //   email: "superadmin@admin.com",
+      //   password: "12345678",
+      // });
+
+      // if (res.success) {
+      //   Cookies.set("accessToken", res.token);
+      // }
+
+      // console.log(res);
+    },
+  },
 };
 </script>
