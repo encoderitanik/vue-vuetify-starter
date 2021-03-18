@@ -40,4 +40,3 @@ export default {
     resetCreate() { this.create = initialCreateUpdate() },
   }
 }
-

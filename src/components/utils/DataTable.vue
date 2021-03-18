@@ -1,9 +1,9 @@
 <template>
-  <v-card class="bg-transparent" flat>
+  <v-card flat class="transparent">
     <v-card-title class="mb-md-5">
       {{ title }}
       <v-spacer></v-spacer>
-      <!-- <v-select
+      <v-select
         dense
         outlined
         hide-details
@@ -12,7 +12,7 @@
         label="Items Per Page"
         style="max-width: 150px"
         :items="[5, 10, 15, 20, 50, 'ALL']"
-      /> -->
+      />
       <v-text-field
         dense
         outlined
@@ -34,7 +34,7 @@
         :show-expand="expanded"
         :items-per-page="options.itemsPerPage"
         item-key="id"
-        class="pt-3 pb-5 shadow"
+        class="pt-3 pb-5 transparent"
       >
         <template v-slot:[`item.name`]="{ item }">
           <div class="d-flex align-center">

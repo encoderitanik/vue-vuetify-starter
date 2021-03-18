@@ -21,3 +21,16 @@ const UPDATE = (state, { array, match = 'id', data }) => {
 export const mutations = {
   SET, RESET, PUSH, UNSHIFT, DELETE, UPDATE
 }
+
+/**
+ * 
+ * @param {String[]} names 
+ * @returns {}
+ */
+export const createMutations = names => {
+  if (!Array.isArray(names)) throw new Error('names have to be an array of mutation names.')
+  return Object
+    .keys(mutations)
+    .filter(name => names.includes(name))
+    .reduce((m, a) => ({ ...m, [a]: mutations[a] }), {})
+}
