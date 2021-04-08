@@ -23,6 +23,7 @@ export const mutations = {
 }
 
 /**
+ * Generate generic mutations 
  * 
  * @param {String[]} names 
  * @returns {}

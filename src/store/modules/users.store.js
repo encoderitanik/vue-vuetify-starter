@@ -20,17 +20,17 @@ const getters = {
 
 const actions = {
   fetchUsers: async ({ commit }) => {
-    let res = await api.users.getAll()
-    if (res.error) return res
+    let { error, ...data } = await api.users.getAll()
+    if (error) return { error, ...data }
     commit('SET', {
       pagination: {
-        totalPage: res.users.total,
-        perPage: res.users.perPage,
-        currentPage: res.users.currentPage,
+        totalPage: data.users.total,
+        perPage: data.users.perPage,
+        currentPage: data.users.currentPage,
       },
-      users: snakeToCamel(res.users.data)
+      users: data.users.data
     })
-    return res
+    return data
   },
   deleteUser: async ({ commit, dispatch }, id) => {
     let res = await api.users.delete(id)

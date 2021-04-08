@@ -104,15 +104,15 @@ export const snakeToCamel = data => {
     }, {})
 }
 
-/**
- * *********************************************************
- * |||| Check wheather a variable empty or not          ||||
- * *********************************************************
- */
+export const isObject = (v) => {
+  return (typeof v === "object" || typeof v === 'function') && (v !== null)
+}
+
 export const isEmpty = v => {
+  if ([undefined, null, ''].includes(v)) return true
   if (Array.isArray(v) && !v.length) return true
-  if (typeof v === 'object' && !Object.keys(v).length) return true
-  return [undefined, null, ''].includes(v)
+  if (isObject(v) && !Object.keys(v).length) return true
+  return false
 }
 
 /**
